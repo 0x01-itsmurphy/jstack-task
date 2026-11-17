@@ -8,6 +8,13 @@ jstack/
 └── backend/    Mock REST API (Node.js + Express)
 ```
 
+## Demo
+
+- **Video:** [jwallet-lite-demo.mov](https://github.com/0x01-itsmurphy/jstack-task/releases/download/v1.0.0/jwallet-lite-demo.mov) (about 15 MB)
+- **APK:** [app-release.apk](https://github.com/0x01-itsmurphy/jstack-task/releases/download/v1.0.0/app-release.apk) (about 53 MB)
+
+Both are also on the [v1.0.0 release page](https://github.com/0x01-itsmurphy/jstack-task/releases/tag/v1.0.0). The APK is built for the Android emulator, so it expects the backend at `10.0.2.2:3000`. To run it on a physical phone, see [Building the APK](#building-the-apk).
+
 ## What's in it
 
 - Login with form validation, a show/hide password toggle, and a session that survives app restarts
