@@ -1,0 +1,19 @@
+{
+  "name": "jwallet-lite-mock-api",
+  "version": "1.0.0",
+  "description": "Mock REST API backend for the jWallet Lite Flutter app",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "dev": "node --watch --env-file-if-exists=.env src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
