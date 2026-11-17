@@ -17,8 +17,7 @@ export const authRoutes = ({ store, config }) => {
 
     sendSuccess(res, {
       accessToken: config.accessToken,
-      tokenType: 'Bearer',
-      user: toUserDto(user, store.findWalletByUserId(user.id)),
+      user: toUserDto(user),
     });
   });
 

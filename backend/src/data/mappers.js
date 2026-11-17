@@ -1,10 +1,9 @@
 import { toRupees } from '../utils/money.js';
 
-export const toUserDto = (user, wallet) => ({
+export const toUserDto = (user) => ({
   id: user.id,
   name: user.name,
   email: user.email,
-  walletId: wallet?.walletId ?? null,
 });
 
 export const toWalletDto = (wallet) => ({

@@ -47,8 +47,13 @@ describe('POST /auth/login', () => {
       body: { email: 'demo@jstack.co', password: 'Demo@123' },
     });
     assert.equal(status, 200);
-    assert.equal(json.data.accessToken, TOKEN);
-    assert.deepEqual(json.data.user, { id: 'USR10001', name: 'Demo User', email: 'demo@jstack.co', walletId: 'WALLET10001' });
+    assert.deepEqual(json, {
+      success: true,
+      data: {
+        accessToken: TOKEN,
+        user: { id: 'USR10001', name: 'Demo User', email: 'demo@jstack.co' },
+      },
+    });
   });
 
   test('email match is case-insensitive', async () => {
@@ -102,7 +107,7 @@ describe('GET /users/profile and /wallet/balance', () => {
   test('returns the profile', async () => {
     const { status, json } = await request('GET', '/users/profile');
     assert.equal(status, 200);
-    assert.equal(json.data.name, 'Demo User');
+    assert.deepEqual(json.data, { id: 'USR10001', name: 'Demo User', email: 'demo@jstack.co' });
   });
 
   test('returns the seeded balance', async () => {
